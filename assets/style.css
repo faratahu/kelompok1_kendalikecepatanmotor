@@ -1,0 +1,8 @@
+.stApp{background:#FAFBFC;color:#2F3640}
+[data-testid="stSidebar"]{background:#FFFFFF;border-right:1px solid #E3E7EC}
+[data-testid="stMetric"]{background:#FFFFFF;border:1px solid #E3E7EC;border-radius:8px;padding:10px 14px}
+[data-testid="stMetricValue"]{color:#2F3640;font-size:1.5rem}
+h1,h2,h3{color:#2F3640;font-weight:650}
+.hdr-title{font-size:1.7rem;font-weight:700;color:#2F3640;margin:0}
+.hdr-sub{color:#6B7482;margin:0 0 8px 0}
+.badge{display:inline-block;padding:3px 12px;border:1px solid #3B5B8C;color:#3B5B8C;border-radius:14px;font-size:.85rem;background:#F1F5FB}
