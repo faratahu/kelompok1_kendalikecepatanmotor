@@ -7,11 +7,15 @@ BLUE, ORANGE, GREEN, GRAY = "#3B5B8C", "#D98B4A", "#5B9279", "#8A94A3"
 
 def _base(title, xt, yt, h=300):
     fig = go.Figure()
-    fig.update_layout(template="plotly_white", title=dict(text=title, font=dict(size=15, color="#2F3640")),
-                      height=h, margin=dict(l=50, r=20, t=50, b=45), hovermode="x unified",
-                      legend=dict(orientation="h", y=1.15, x=0), font=dict(color="#2F3640"),
-                      xaxis=dict(title=xt, showgrid=True, gridcolor="#ECEFF3"),
-                      yaxis=dict(title=yt, showgrid=True, gridcolor="#ECEFF3"))
+    fig.update_layout(
+        title=dict(text=title, font=dict(size=15)),
+        height=h,
+        margin=dict(l=50, r=20, t=50, b=45),
+        hovermode="x unified",
+        legend=dict(orientation="h", y=1.15, x=0),
+        xaxis=dict(title=xt, showgrid=True),
+        yaxis=dict(title=yt, showgrid=True),
+    )
     return fig
 
 

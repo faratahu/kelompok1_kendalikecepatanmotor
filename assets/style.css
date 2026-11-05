@@ -1,8 +1,69 @@
-.stApp{background:#FAFBFC;color:#2F3640}
-[data-testid="stSidebar"]{background:#FFFFFF;border-right:1px solid #E3E7EC}
-[data-testid="stMetric"]{background:#FFFFFF;border:1px solid #E3E7EC;border-radius:8px;padding:10px 14px}
-[data-testid="stMetricValue"]{color:#2F3640;font-size:1.5rem}
-h1,h2,h3{color:#2F3640;font-weight:650}
-.hdr-title{font-size:1.7rem;font-weight:700;color:#2F3640;margin:0}
-.hdr-sub{color:#6B7482;margin:0 0 8px 0}
-.badge{display:inline-block;padding:3px 12px;border:1px solid #3B5B8C;color:#3B5B8C;border-radius:14px;font-size:.85rem;background:#F1F5FB}
+/* Container & Background */
+.stApp {
+    background-color: var(--background-color, #FAFBFC);
+    color: var(--text-color, #2F3640);
+}
+
+[data-testid="stSidebar"] {
+    background-color: var(--secondary-background-color, #FFFFFF);
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+/* Metric Cards */
+[data-testid="stMetric"] {
+    background-color: var(--secondary-background-color, #FFFFFF);
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--text-color, #2F3640) !important;
+    opacity: 0.85;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--text-color, #2F3640) !important;
+    font-size: 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--text-color, #2F3640);
+    font-weight: 650;
+}
+
+.hdr-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text-color, #2F3640);
+    margin: 0;
+}
+
+.hdr-sub {
+    color: var(--text-color, #6B7482);
+    opacity: 0.75;
+    margin: 0 0 8px 0;
+}
+
+/* Status Badges */
+.badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border: 1px solid #3B5B8C;
+    color: var(--text-color, #3B5B8C);
+    border-radius: 14px;
+    font-size: .85rem;
+    background-color: rgba(59, 91, 140, 0.15);
+}
+
+/* Dark mode explicit overrides */
+@media (prefers-color-scheme: dark) {
+    [data-testid="stMetric"] {
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+    .badge {
+        border-color: #5B82B8;
+        background-color: rgba(91, 130, 184, 0.2);
+    }
+}

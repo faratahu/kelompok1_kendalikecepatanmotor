@@ -17,8 +17,15 @@ def diagram_html():
         items.append(f'<div class="b">{i+1}. {n}</div>')
         if i < len(BLOCKS) - 1:
             items.append('<div class="a">&#8595;</div>')
-    return ("<style>body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0}.b{border:1px solid #CBD2DB;"
-            "border-radius:6px;padding:8px 14px;background:#F7F9FC;color:#2F3640;text-align:center;font-size:14px}"
-            ".a{text-align:center;color:#3B5B8C;font-size:16px;line-height:16px}"
-            ".n{margin-top:10px;font-size:12px;color:#6B7482;text-align:center}</style>"
+    return ("""<style>
+body { font-family: Inter, Segoe UI, Arial, sans-serif; margin: 0; background: transparent; }
+.b { border: 1px solid #CBD2DB; border-radius: 6px; padding: 8px 14px; background: #F7F9FC; color: #2F3640; text-align: center; font-size: 14px; }
+.a { text-align: center; color: #3B5B8C; font-size: 16px; line-height: 16px; }
+.n { margin-top: 10px; font-size: 12px; color: #6B7482; text-align: center; }
+@media (prefers-color-scheme: dark) {
+  .b { border-color: #3E4652; background: #262730; color: #FAFAFA; }
+  .a { color: #7AA2E3; }
+  .n { color: #A0AAB8; }
+}
+</style>"""
             + "".join(items) + '<div class="n">&#8635; Feedback: blok 9 kembali ke blok 2</div>')
